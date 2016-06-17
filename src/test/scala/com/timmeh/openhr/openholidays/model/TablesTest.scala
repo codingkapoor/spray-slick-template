@@ -29,7 +29,7 @@ class TablesTest extends Specification {
     db.run(holidays.schema.create)
   }
 
-  def insertHoliday(db: Database): Future[Int] = db.run(holidays += Holiday(101, 101, new java.sql.Date(2020, 11, 1), "Full", "Annual Leave"))
+  def insertHoliday(db: Database): Future[Int] = db.run(holidays += LargeTable1(101, 101, new java.sql.Date(2020, 11, 1), "Full", "Annual Leave"))
 
   "Creating a test schema should work" >> new Context {
     val numberOfTables = for {
