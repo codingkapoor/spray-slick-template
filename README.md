@@ -1,8 +1,4 @@
-## Open Holidays
-
-Intended as a microservice for handling employee annual leave, built with Scala, Spray, and Slick.
-
-In the early stages of development....
+## Spray and slick application template
 
 
 ### Running the application
