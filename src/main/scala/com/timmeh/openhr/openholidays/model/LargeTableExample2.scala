@@ -46,8 +46,10 @@ class LargeTableExample2(tag: Tag)
 
   def * = (idToD, eToI, jToN, oToS, tToX, yToZ).shaped <> (
 //      Map from tuple to case class
-      {case (idToD, eToI, jToN, oToS, tToX, yToZ) => LargeTableRow(idToD, eToI, jToN, oToS, tToX, yToZ)},
+      {case (idToD, eToI, jToN, oToS, tToX, yToZ) => LargeTableRow(IdToD.tupled(idToD), EToI.tupled(eToI),
+        JToN.tupled(jToN), OToS.tupled(oToS), TToX.tupled(tToX), YToZ.tupled(yToZ))},
 //      Map from case class to tuple
-      (lt: LargeTableRow) => Some(lt.idToD, lt.eToI, lt.jToN, lt.oToS, lt.tToX, lt.yToZ)
+      (lt: LargeTableRow) => Some(IdToD.unapply(lt.idToD).get, EToI.unapply(lt.eToI).get, JToN.unapply(lt.jToN).get,
+        OToS.unapply(lt.oToS).get, TToX.unapply(lt.tToX).get, YToZ.unapply(lt.yToZ).get)
     )
 }

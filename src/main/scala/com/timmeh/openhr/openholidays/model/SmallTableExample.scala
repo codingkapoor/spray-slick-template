@@ -1,7 +1,6 @@
 package com.timmeh.openhr.openholidays.model
 
 import slick.driver.H2Driver.api._
-import slick.lifted.{ProvenShape, ForeignKeyQuery}
 
 case class Holiday(id: Int, employeeId: Int, holDate: java.sql.Date, holDayType: String, holType: String)
 
