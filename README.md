@@ -1,5 +1,5 @@
 ## Spray and slick application template
-
+https://timturnstechie.blogspot.com/2016/07/scala-slick-dealing-with-large-tables.html
 
 ### Running the application
 Follow these steps to get started:
